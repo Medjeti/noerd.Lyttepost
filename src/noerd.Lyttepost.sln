@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "noerd.Lyttepost.Core", "noerd.Lyttepost.Core\noerd.Lyttepost.Core.csproj", "{DC5882D3-1540-4398-AC6D-C57BB7E90E65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "noerd.Lyttepost.Web", "noerd.Lyttepost.Web\noerd.Lyttepost.Web.csproj", "{652518D9-3F32-4CF0-A09A-42EF36050116}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC5882D3-1540-4398-AC6D-C57BB7E90E65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC5882D3-1540-4398-AC6D-C57BB7E90E65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC5882D3-1540-4398-AC6D-C57BB7E90E65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC5882D3-1540-4398-AC6D-C57BB7E90E65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{652518D9-3F32-4CF0-A09A-42EF36050116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{652518D9-3F32-4CF0-A09A-42EF36050116}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{652518D9-3F32-4CF0-A09A-42EF36050116}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{652518D9-3F32-4CF0-A09A-42EF36050116}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

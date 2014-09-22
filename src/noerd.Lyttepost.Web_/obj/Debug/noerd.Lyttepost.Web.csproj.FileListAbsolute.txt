@@ -1,0 +1,8 @@
+I:\KODE\noerd.Lyttepost\src\noerd.Lyttepost.Web\bin\WebApplication1.dll.config
+I:\KODE\noerd.Lyttepost\src\noerd.Lyttepost.Web\bin\WebApplication1.dll
+I:\KODE\noerd.Lyttepost\src\noerd.Lyttepost.Web\bin\WebApplication1.pdb
+I:\KODE\noerd.Lyttepost\src\noerd.Lyttepost.Web\bin\Microsoft.Web.Infrastructure.dll
+I:\KODE\noerd.Lyttepost\src\noerd.Lyttepost.Web\bin\Microsoft.Web.Infrastructure.xml
+I:\KODE\noerd.Lyttepost\src\noerd.Lyttepost.Web\obj\Debug\noerd.Lyttepost.Web.csprojResolveAssemblyReference.cache
+I:\KODE\noerd.Lyttepost\src\noerd.Lyttepost.Web\obj\Debug\WebApplication1.dll
+I:\KODE\noerd.Lyttepost\src\noerd.Lyttepost.Web\obj\Debug\WebApplication1.pdb
