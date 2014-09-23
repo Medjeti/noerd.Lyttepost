@@ -9,12 +9,17 @@ namespace noerd.Lyttepost.Core.Services
 {
     public static class SearchService
     {
-        public static List<LPEntity> Search(string query)
-        {
+        private const int MAX_COUNT = 20;
+
+        public static IEnumerable<LPEntity> Search(string query)
+        {            
             var list = new List<LPEntity>();
 
-            //list.AddRange(TwitterService.DoSearch(query));
-            list.AddRange(FacebookService.DoSearch(query));
+            list.AddRange(TwitterService.DoSearch(query, MAX_COUNT));
+            list.AddRange(FacebookService.DoSearch(query, MAX_COUNT));
+
+            var rnd = new Random(); 
+            list = list.OrderBy(x => rnd.Next()).ToList();
 
             return list;
         }

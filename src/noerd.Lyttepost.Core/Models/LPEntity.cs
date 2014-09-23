@@ -8,11 +8,11 @@ namespace noerd.Lyttepost.Core.Models
 {
     public class LPEntity
     {
-        public long Id { get; set; }
+        public string Id { get; set; }
         public string Text { get; set; }
         public string Source { get; set; }
         public string Creator { get; set; }
         public DateTime CreatedAt { get; set; }
-        public List<string> Tags { get; set; }
+        public IEnumerable<string> Tags { get; set; }
     }
 }

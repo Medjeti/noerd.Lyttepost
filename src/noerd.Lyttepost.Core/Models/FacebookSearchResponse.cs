@@ -7,8 +7,17 @@ using RestSharp.Deserializers;
 
 namespace noerd.Lyttepost.Core.Models
 {
-    public class FacebookSearchResponse
+    public class FacebookSearchResponseWrapper
+    {
+        public List<FacebookPost> Data { get; set; }
+        //public string Id { get; set; }
+        //public string Name { get; set; }
+    }
+    
+    public class FacebookPost
     {
         public string Id { get; set; }
+        public string Name { get; set; }
     }
+
 }

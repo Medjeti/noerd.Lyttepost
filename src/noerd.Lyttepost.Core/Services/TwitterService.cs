@@ -16,7 +16,7 @@ namespace noerd.Lyttepost.Core.Services
         // ---------------------------------------------------------------------------------
 
 
-        public static List<LPEntity> DoSearch(string query)
+        public static IEnumerable<LPEntity> DoSearch(string query, int maxCount)
         {
             Authenticate();
 
@@ -24,15 +24,16 @@ namespace noerd.Lyttepost.Core.Services
             searchParameter.MaximumNumberOfResults = 5;
             var tweets = Search.SearchTweets(searchParameter);
 
-            var list = tweets.Select(tweet => new LPEntity() {
-                Id = tweet.Id,
+            var list = tweets.Take(maxCount).Select(tweet => new LPEntity()
+            {
+                Id = tweet.Id.ToString(),
                 Text = tweet.Text,
                 Source = "Twitter",
                 //Creator = tweet.Creator.Name + " (@" + tweet.Creator.ScreenName + ")",
                 Creator = "@" + tweet.Creator.ScreenName,
                 CreatedAt = tweet.CreatedAt,
-                Tags = tweet.Hashtags.Select(tag => tag.Text).ToList()
-            }).ToList();
+                Tags = tweet.Hashtags.Select(tag => tag.Text)
+            });
 
             return list;
         }

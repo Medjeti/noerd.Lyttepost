@@ -12,7 +12,7 @@ namespace noerd.Lyttepost.Web.Controllers
     public class MessageController : ApiController
     {
         [HttpGet]
-        public List<LPEntity> GetMessages([FromUri] string q)
+        public IEnumerable<LPEntity> GetMessages([FromUri] string q)
         {
 
             var list = SearchService.Search(q);
