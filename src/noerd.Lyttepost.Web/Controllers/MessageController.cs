@@ -12,17 +12,11 @@ namespace noerd.Lyttepost.Web.Controllers
     public class MessageController : ApiController
     {
         [HttpGet]
-        public List<LPEntity> GetMessages()
+        public List<LPEntity> GetMessages([FromUri] string q)
         {
 
-            var list = TwitterService.GetTweets("fisse");
+            var list = SearchService.Search(q);
 
-            //var msg = new LPEntity()
-            //{
-            //    Id = 0,
-            //    Source = "",
-            //    Text = "Hello World"
-            //};
             return list;
         }
     }

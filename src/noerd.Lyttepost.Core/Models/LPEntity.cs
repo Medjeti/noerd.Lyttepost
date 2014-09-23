@@ -13,6 +13,6 @@ namespace noerd.Lyttepost.Core.Models
         public string Source { get; set; }
         public string Creator { get; set; }
         public DateTime CreatedAt { get; set; }
-        public string Tags { get; set; }
+        public List<string> Tags { get; set; }
     }
 }
