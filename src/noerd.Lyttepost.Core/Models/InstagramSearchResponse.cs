@@ -17,8 +17,10 @@ namespace noerd.Lyttepost.Core.Models
 
         public class InstagramItem
         {
-            public string MediaCount { get; set; }
-            public string Name { get; set; }
+            public string Id { get; set; }
+            public string Type { get; set; }
+            public string Filter { get; set; }
+            public string[] Tags { get; set; }
         }
     }
 }

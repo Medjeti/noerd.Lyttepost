@@ -21,19 +21,20 @@ namespace noerd.Lyttepost.Core.Services
         public static IEnumerable<LPEntity> DoSearch(string query, int maxCount)
         {
 
-            //
+            // 
 
-            var client = new RestClient("https://api.instagram.com/");
-            var request = new RestRequest("v1/tags/search", Method.GET);
-            request.AddParameter("q", query);
+            var client = new RestClient("https://api.instagram.com");
+            var request = new RestRequest(string.Format("v1/tags/{0}/media/recent", query), Method.GET);
+            request.AddParameter("count", maxCount);
             request.AddParameter("client_id", CLIENT_ID);
             //request.AddParameter("access_token", AccessToken);
 
             var response = client.Execute<InstagramSearchResponse.InstagramSearchResponseWrapper>(request);
+            
+            //var list = new List<LPEntity>() { new LPEntity() { Text = response.Content } };
 
             var posts = response.Data.Data;
-            //var list = new List<LPEntity>() { new LPEntity() { Text = response.Content } };
-            var list = posts.Take(maxCount).Select(x => new LPEntity() { Id = x.MediaCount, Text = x.Name, Source = "Instagram" });
+            var list = posts.Take(maxCount).Select(x => new LPEntity() { Id = x.Id, Text = "Hejhej", Tags = x.Tags, Source = "Instagram" });
 
             return list;
         }
