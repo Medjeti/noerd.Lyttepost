@@ -15,8 +15,9 @@ namespace noerd.Lyttepost.Core.Services
         {            
             var list = new List<LPEntity>();
 
-            list.AddRange(TwitterService.DoSearch(query, MAX_COUNT));
-            list.AddRange(FacebookService.DoSearch(query, MAX_COUNT));
+            //list.AddRange(TwitterService.DoSearch(query, MAX_COUNT));
+            //list.AddRange(FacebookService.DoSearch(query, MAX_COUNT));
+            list.AddRange(InstagramService.DoSearch(query, MAX_COUNT));
 
             var rnd = new Random(); 
             list = list.OrderBy(x => rnd.Next()).ToList();

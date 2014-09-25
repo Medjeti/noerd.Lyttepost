@@ -83,10 +83,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\FacebookSearchResponse.cs" />
+    <Compile Include="Models\InstagramSearchResponse.cs" />
     <Compile Include="Models\LPEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\SearchService.cs" />
     <Compile Include="Services\FacebookService.cs" />
+    <Compile Include="Services\InstagramService.cs" />
     <Compile Include="Services\TwitterService.cs" />
   </ItemGroup>
   <ItemGroup>
