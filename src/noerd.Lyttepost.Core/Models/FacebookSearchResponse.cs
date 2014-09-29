@@ -9,14 +9,15 @@ namespace noerd.Lyttepost.Core.Models
 {
     public class FacebookSearchResponseWrapper
     {
-        public List<FacebookPost> Data { get; set; }
+        public List<FacebookItem> Data { get; set; }
         //public string Id { get; set; }
         //public string Name { get; set; }
     }
     
-    public class FacebookPost
+    public class FacebookItem
     {
         public string Id { get; set; }
         public string Name { get; set; }
+
     }
 }

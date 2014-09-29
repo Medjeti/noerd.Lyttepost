@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RestSharp.Deserializers;
 
 namespace noerd.Lyttepost.Core.Models
 {
@@ -15,12 +16,42 @@ namespace noerd.Lyttepost.Core.Models
             //public string Name { get; set; }
         }
 
+        // ---------------------------------------------------------------------------------
+
         public class InstagramItem
         {
             public string Id { get; set; }
             public string Type { get; set; }
-            public string Filter { get; set; }
-            public string[] Tags { get; set; }
+            public string Link { get; set; }
+            public InstagramCaption Caption { get; set; }
+            //public string Filter { get; set; }
+            public List<string> Tags { get; set; }
+            public InstagramImages Images { get; set; }
         }
+
+        // ---------------------------------------------------------------------------------
+
+        public class InstagramCaption
+        {
+            public string Text { get; set; }
+            //public long CreatedTime { get; set; }   
+        }
+
+        // ---------------------------------------------------------------------------------
+
+        public class InstagramImages
+        {
+            public InstagramImage Thumbnail { get; set; }
+            [DeserializeAs(Name = "standard_resolution")]
+            public InstagramImage Image { get; set; } 
+        }
+
+        // ---------------------------------------------------------------------------------
+
+        public class InstagramImage
+        {
+            public string Url { get; set; } 
+        }
+
     }
 }

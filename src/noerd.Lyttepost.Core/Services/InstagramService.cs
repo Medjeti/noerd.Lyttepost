@@ -34,7 +34,17 @@ namespace noerd.Lyttepost.Core.Services
             //var list = new List<LPEntity>() { new LPEntity() { Text = response.Content } };
 
             var posts = response.Data.Data;
-            var list = posts.Take(maxCount).Select(x => new LPEntity() { Id = x.Id, Text = "Hejhej", Tags = x.Tags, Source = "Instagram" });
+            var list = posts.Take(maxCount).Select(x => new LPEntity()
+            {
+                Id = x.Id, 
+                Text = x.Caption.Text,
+                Type = x.Type,
+                URL = x.Link,
+                //CreatedAt = DateTime.FromFileTime(x.Caption.CreatedTime),
+                Source = "Instagram" ,
+                Tags = x.Tags,
+                Media = new LPMedia() { Thumbnail = x.Images.Thumbnail.Url, URL = x.Images.Image != null ? x.Images.Image.Url : "" }
+            });
 
             return list;
         }

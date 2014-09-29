@@ -21,18 +21,25 @@ namespace noerd.Lyttepost.Core.Services
             Authenticate();
 
             var searchParameter = Search.GenerateSearchTweetParameter(query);
-            searchParameter.MaximumNumberOfResults = 5;
+            searchParameter.MaximumNumberOfResults = maxCount;
             var tweets = Search.SearchTweets(searchParameter);
+
+            //var media = tweets.Where(x => x.Media.Any());
 
             var list = tweets.Take(maxCount).Select(tweet => new LPEntity()
             {
                 Id = tweet.Id.ToString(),
                 Text = tweet.Text,
                 Source = "Twitter",
-                //Creator = tweet.Creator.Name + " (@" + tweet.Creator.ScreenName + ")",
-                Creator = "@" + tweet.Creator.ScreenName,
+                Type = tweet.Source,
+                Creator = tweet.Creator.Name + " (@" + tweet.Creator.ScreenName + ")",
+                //Creator = "@" + tweet.Creator.ScreenName,
                 CreatedAt = tweet.CreatedAt,
-                Tags = tweet.Hashtags.Select(tag => tag.Text)
+                Tags = tweet.Hashtags.Select(tag => tag.Text),
+                Media = tweet.Media != null && tweet.Media.Any() ? new LPMedia()
+                {
+                    Id = tweet.Media.First().Id.ToString(), Thumbnail = tweet.Media.First().MediaURL, URL = tweet.Media.First().DisplayURL
+                } : new LPMedia() { }
             });
 
             return list;
