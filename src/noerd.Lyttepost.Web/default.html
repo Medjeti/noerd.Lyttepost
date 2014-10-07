@@ -1,9 +1,28 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title></title>
+    
+    <title>noerd.Lyttepost</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+
+    <script src="/script/lyttepost.controller.js"></script>
+    <script src="/script/lyttepost.directive.js"></script>
+    <script src="/script/lyttepost.service.js"></script>
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <!--<link rel="stylesheet" href="/foundation/css/normalize.css" />
+    <link rel="stylesheet" href="/foundation/css/foundation.min.css" />-->
+
 </head>
-<body>
+
+<body ng-app="lyttepost">
+
+    <h1>Lyttepost</h1>
+
+    <div ng-controller="lpController">
+        <lpsearch></lpsearch>
+    </div>
 
 </body>
+
 </html>

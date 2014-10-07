@@ -14,8 +14,9 @@ namespace noerd.Lyttepost.Web.Controllers
         [HttpGet]
         public IEnumerable<LPEntity> GetMessages([FromUri] string q)
         {
-
-            var list = SearchService.Search(q);
+            bool searchTwitter = true;
+            bool searchInstagram = true;
+            var list = SearchService.Search(q, searchTwitter, searchInstagram);
 
             return list;
         }

@@ -11,13 +11,17 @@ namespace noerd.Lyttepost.Core.Services
     {
         private const int MAX_COUNT = 20;
 
-        public static IEnumerable<LPEntity> Search(string query)
+        public static IEnumerable<LPEntity> Search(string query, bool searchTwitter, bool searchInstagram)
         {            
             var list = new List<LPEntity>();
 
-            list.AddRange(TwitterService.DoSearch(query, MAX_COUNT));
+            if (searchTwitter)
+                list.AddRange(TwitterService.DoSearch(query, MAX_COUNT));
+
             //list.AddRange(FacebookService.DoSearch(query, MAX_COUNT));
-            //list.AddRange(InstagramService.DoSearch(query, MAX_COUNT));
+
+            if (searchInstagram)
+                list.AddRange(InstagramService.DoSearch(query, MAX_COUNT));
 
             var rnd = new Random(); 
             list = list.OrderBy(x => rnd.Next()).ToList();

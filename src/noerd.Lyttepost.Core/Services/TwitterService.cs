@@ -32,10 +32,13 @@ namespace noerd.Lyttepost.Core.Services
                 Text = tweet.Text,
                 Source = "Twitter",
                 Type = tweet.Source,
-                Creator = tweet.Creator.Name + " (@" + tweet.Creator.ScreenName + ")",
+                CreatorName = tweet.Creator.Name,
+                CreatorNick = tweet.Creator.ScreenName,
+                CreatorImage = tweet.Creator.ProfileImageUrl.Replace("_normal", ""),
                 //Creator = "@" + tweet.Creator.ScreenName,
                 CreatedAt = tweet.CreatedAt,
                 Tags = tweet.Hashtags.Select(tag => tag.Text),
+                Place = tweet.Place != null ? tweet.Place.FullName : "",
                 Media = tweet.Media != null && tweet.Media.Any() ? new LPMedia()
                 {
                     Id = tweet.Media.First().Id.ToString(), Thumbnail = tweet.Media.First().MediaURL, URL = tweet.Media.First().DisplayURL

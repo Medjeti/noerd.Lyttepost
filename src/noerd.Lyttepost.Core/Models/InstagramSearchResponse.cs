@@ -27,6 +27,7 @@ namespace noerd.Lyttepost.Core.Models
             //public string Filter { get; set; }
             public List<string> Tags { get; set; }
             public InstagramImages Images { get; set; }
+            public InstagramUser User { get; set; }
         }
 
         // ---------------------------------------------------------------------------------
@@ -51,6 +52,15 @@ namespace noerd.Lyttepost.Core.Models
         public class InstagramImage
         {
             public string Url { get; set; } 
+        }
+
+        // ---------------------------------------------------------------------------------
+
+        public class InstagramUser
+        {
+            public string Username { get; set; }
+            public string FullName { get; set; }
+            public string ProfilePicture { get; set; }
         }
 
     }

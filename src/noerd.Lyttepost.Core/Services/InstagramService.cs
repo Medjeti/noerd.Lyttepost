@@ -37,11 +37,14 @@ namespace noerd.Lyttepost.Core.Services
             var list = posts.Take(maxCount).Select(x => new LPEntity()
             {
                 Id = x.Id, 
-                Text = x.Caption.Text,
+                Text = x.Caption != null ? x.Caption.Text : "[ no text??? ]",
                 Type = x.Type,
                 URL = x.Link,
                 //CreatedAt = DateTime.FromFileTime(x.Caption.CreatedTime),
                 Source = "Instagram" ,
+                CreatorName = x.User.FullName,
+                CreatorNick = x.User.Username,
+                CreatorImage = x.User.ProfilePicture,
                 Tags = x.Tags,
                 Media = new LPMedia() { Thumbnail = x.Images.Thumbnail.Url, URL = x.Images.Image != null ? x.Images.Image.Url : "" }
             });

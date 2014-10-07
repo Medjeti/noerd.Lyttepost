@@ -13,8 +13,11 @@ namespace noerd.Lyttepost.Core.Models
         public string Type { get; set; }
         public string URL { get; set; }
         public string Source { get; set; }
-        public string Creator { get; set; }
+        public string CreatorName { get; set; }
+        public string CreatorNick { get; set; }
+        public string CreatorImage { get; set; }
         public DateTime CreatedAt { get; set; }
+        public string Place { get; set; }
         public IEnumerable<string> Tags { get; set; }
         public LPMedia Media { get; set; }
     }
