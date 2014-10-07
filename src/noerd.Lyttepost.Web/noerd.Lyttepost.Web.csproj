@@ -75,7 +75,22 @@
     <Content Include="accesstoken.html" />
     <Content Include="css\main.css" />
     <Content Include="default.html" />
+    <Content Include="foundation\css\foundation.css" />
+    <Content Include="foundation\css\foundation.min.css" />
+    <Content Include="foundation\css\normalize.css" />
+    <Content Include="foundation\js\foundation.min.js" />
+    <Content Include="foundation\js\foundation\foundation.dropdown.js" />
+    <Content Include="foundation\js\foundation\foundation.interchange.js" />
+    <Content Include="foundation\js\foundation\foundation.js" />
+    <Content Include="foundation\js\foundation\foundation.reveal.js" />
+    <Content Include="foundation\js\vendor\fastclick.js" />
+    <Content Include="foundation\js\vendor\jquery.cookie.js" />
+    <Content Include="foundation\js\vendor\jquery.js" />
+    <Content Include="foundation\js\vendor\modernizr.js" />
+    <Content Include="foundation\js\vendor\placeholder.js" />
     <Content Include="Global.asax" />
+    <Content Include="img\instagram.png" />
+    <Content Include="img\twitter.png" />
     <Content Include="script\lyttepost.controller.js" />
     <Content Include="script\lyttepost.directive.js" />
     <Content Include="script\lyttepost.service.js" />
@@ -92,6 +107,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="foundation\img\.gitkeep" />
+    <None Include="Properties\PublishProfiles\Publish Release.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
