@@ -87,6 +87,7 @@
     <Compile Include="Models\LPEntity.cs" />
     <Compile Include="Models\LPMedia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\NoerdBot\NoerdBotService.cs" />
     <Compile Include="Services\SearchService.cs" />
     <Compile Include="Services\FacebookService.cs" />
     <Compile Include="Services\InstagramService.cs" />
