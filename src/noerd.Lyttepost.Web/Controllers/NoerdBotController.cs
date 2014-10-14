@@ -12,10 +12,12 @@ namespace noerd.Lyttepost.Web.Controllers
     public class NoerdBotController : ApiController
     {
         [HttpGet]
-        public string Go()
+        public string Go() 
         {
             var service = new NoerdBotService();
-            return service.StartStream();
+            service.StartStream();
+
+            return "Running";
         }
     }
 }

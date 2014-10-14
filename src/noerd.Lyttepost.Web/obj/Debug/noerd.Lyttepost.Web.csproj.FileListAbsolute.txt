@@ -76,3 +76,10 @@ C:\WORKSPACE\noerd.Lyttepost\src\noerd.Lyttepost.Web\bin\RestSharp.xml
 C:\WORKSPACE\noerd.Lyttepost\src\noerd.Lyttepost.Web\obj\Debug\noerd.Lyttepost.Web.csprojResolveAssemblyReference.cache
 C:\WORKSPACE\noerd.Lyttepost\src\noerd.Lyttepost.Web\obj\Debug\noerd.Lyttepost.Web.dll
 C:\WORKSPACE\noerd.Lyttepost\src\noerd.Lyttepost.Web\obj\Debug\noerd.Lyttepost.Web.pdb
+C:\WORKSPACE\noerd.Lyttepost\src\noerd.Lyttepost.Web\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\WORKSPACE\noerd.Lyttepost\src\noerd.Lyttepost.Web\bin\Microsoft.Owin.dll
+C:\WORKSPACE\noerd.Lyttepost\src\noerd.Lyttepost.Web\bin\Microsoft.Owin.Security.dll
+C:\WORKSPACE\noerd.Lyttepost\src\noerd.Lyttepost.Web\bin\Owin.dll
+C:\WORKSPACE\noerd.Lyttepost\src\noerd.Lyttepost.Web\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\WORKSPACE\noerd.Lyttepost\src\noerd.Lyttepost.Web\bin\Microsoft.Owin.xml
+C:\WORKSPACE\noerd.Lyttepost\src\noerd.Lyttepost.Web\bin\Microsoft.Owin.Security.xml

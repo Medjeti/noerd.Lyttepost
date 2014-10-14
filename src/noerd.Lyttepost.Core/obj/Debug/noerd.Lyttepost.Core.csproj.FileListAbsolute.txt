@@ -44,3 +44,15 @@ C:\WORKSPACE\noerd.Lyttepost\src\noerd.Lyttepost.Core\bin\Debug\RestSharp.xml
 C:\WORKSPACE\noerd.Lyttepost\src\noerd.Lyttepost.Core\obj\Debug\noerd.Lyttepost.Core.csprojResolveAssemblyReference.cache
 C:\WORKSPACE\noerd.Lyttepost\src\noerd.Lyttepost.Core\obj\Debug\noerd.Lyttepost.Core.dll
 C:\WORKSPACE\noerd.Lyttepost\src\noerd.Lyttepost.Core\obj\Debug\noerd.Lyttepost.Core.pdb
+C:\WORKSPACE\noerd.Lyttepost\src\noerd.Lyttepost.Core\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\WORKSPACE\noerd.Lyttepost\src\noerd.Lyttepost.Core\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\WORKSPACE\noerd.Lyttepost\src\noerd.Lyttepost.Core\bin\Debug\Microsoft.Owin.dll
+C:\WORKSPACE\noerd.Lyttepost\src\noerd.Lyttepost.Core\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\WORKSPACE\noerd.Lyttepost\src\noerd.Lyttepost.Core\bin\Debug\Microsoft.Owin.Security.dll
+C:\WORKSPACE\noerd.Lyttepost\src\noerd.Lyttepost.Core\bin\Debug\Owin.dll
+C:\WORKSPACE\noerd.Lyttepost\src\noerd.Lyttepost.Core\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+C:\WORKSPACE\noerd.Lyttepost\src\noerd.Lyttepost.Core\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\WORKSPACE\noerd.Lyttepost\src\noerd.Lyttepost.Core\bin\Debug\Microsoft.Owin.xml
+C:\WORKSPACE\noerd.Lyttepost\src\noerd.Lyttepost.Core\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\WORKSPACE\noerd.Lyttepost\src\noerd.Lyttepost.Core\bin\Debug\Microsoft.Owin.Security.xml
+C:\WORKSPACE\noerd.Lyttepost\src\noerd.Lyttepost.Core\bin\Debug\Newtonsoft.Json.xml
