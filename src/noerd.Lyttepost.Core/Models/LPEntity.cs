@@ -19,6 +19,6 @@ namespace noerd.Lyttepost.Core.Models
         public DateTime CreatedAt { get; set; }
         public string Place { get; set; }
         public IEnumerable<string> Tags { get; set; }
-        public LPMedia Media { get; set; }
+        public IEnumerable<LPMedia> Media { get; set; }
     }
 }

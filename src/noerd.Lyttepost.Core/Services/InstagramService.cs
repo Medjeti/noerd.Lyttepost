@@ -46,7 +46,7 @@ namespace noerd.Lyttepost.Core.Services
                 CreatorNick = x.User.Username,
                 CreatorImage = x.User.ProfilePicture,
                 Tags = x.Tags,
-                Media = new LPMedia() { Thumbnail = x.Images.Thumbnail.Url, URL = x.Images.Image != null ? x.Images.Image.Url : "" }
+                Media = new List<LPMedia>() { new LPMedia() { Thumbnail = x.Images.Thumbnail.Url, URL = x.Images.Image != null ? x.Images.Image.Url : "" }}
             });
 
             return list;

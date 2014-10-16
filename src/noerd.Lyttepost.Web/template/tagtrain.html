@@ -1,0 +1,36 @@
+﻿<div class="search-box">
+    <div class="large-12 columns">
+        <form>
+            <input type="text" ng-model="searchTerm" placeholder="Søg her - fx. 'fisse'" />
+            <button ng-click="doSearch()">Lyt, for helvede!</button>
+        </form>
+    </div>
+</div>
+
+<div class="results">
+    <ul ng-repeat="item in items">
+        <li class="item">
+            
+            <div class="creator-nick">@{{ item.CreatorNick }}</div>
+            
+            <div class="right-col">
+                <div class="inner">
+                    <div class="text" ng-bind-html="parseMessage(item.Text)"></div>
+
+                    <ul class="tags" ng-repeat="tag in item.tags">
+                        <li><a href="#">{{ tag }}</a></li>
+
+                    <!--<div class="media" ng-if="item.Media != null">
+                        <ul ng-repeat="media in item.Media">
+                            <li>
+                                <a href="{{ media.URL }}" target="_blank">
+                                    <img src="{{ media.Thumbnail }}" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>-->
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

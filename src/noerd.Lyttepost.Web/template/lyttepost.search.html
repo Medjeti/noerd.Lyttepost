@@ -18,18 +18,22 @@
             
             <div class="right-col">
                 <div class="inner">
-                    <div class="text">{{ item.Text }}</div>
+                    <div class="text" ng-bind-html="parseMessage(item.Text)"></div>
 
                     <!--TAGS
                     <ul class="tags" ng-repeat="tag in item.tags">
                         <li><a href="#">{{ tag }}</a></li>
                     </ul>-->
 
-                    <div class="media" ng-if="item.Media.Thumbnail != null ">
-                        <a href="{{ item.Media.URL }}" target="_blank">
-                            <img src="{{ item.Media.Thumbnail }}" />
-                            
-                        </a>
+                    <div class="media" ng-if="item.Media != null">
+                        <ul ng-repeat="media in item.Media">
+                            <li>
+                                <a href="{{ media.URL }}" target="_blank">
+                                    <img src="{{ media.Thumbnail }}" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </li>

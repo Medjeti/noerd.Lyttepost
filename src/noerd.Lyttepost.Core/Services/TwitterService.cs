@@ -12,6 +12,7 @@ namespace noerd.Lyttepost.Core.Services
     {
 
         private static bool IsAuthenticated { get; set; }
+        private const bool REQUIRE_MEDIA = false;
 
         // ---------------------------------------------------------------------------------
 
@@ -22,8 +23,8 @@ namespace noerd.Lyttepost.Core.Services
 
             var searchParameter = Search.GenerateSearchTweetParameter(query);
             searchParameter.MaximumNumberOfResults = maxCount;
-            var tweets = Search.SearchTweets(searchParameter);
-
+            var tweets = Search.SearchTweets(searchParameter).Where(x => (REQUIRE_MEDIA ? x.Media != null : true));
+            
             //var media = tweets.Where(x => x.Media.Any());
 
             var list = tweets.Take(maxCount).Select(tweet => new LPEntity()
@@ -39,10 +40,14 @@ namespace noerd.Lyttepost.Core.Services
                 CreatedAt = tweet.CreatedAt,
                 Tags = tweet.Hashtags.Select(tag => tag.Text),
                 Place = tweet.Place != null ? tweet.Place.FullName : "",
-                Media = tweet.Media != null && tweet.Media.Any() ? new LPMedia()
-                {
-                    Id = tweet.Media.First().Id.ToString(), Thumbnail = tweet.Media.First().MediaURL, URL = tweet.Media.First().DisplayURL
-                } : new LPMedia() { }
+                Media = tweet.Media != null && tweet.Media.Any() ?
+                    tweet.Media.Select(x => new LPMedia()
+                    {
+                        Id = x.Id.ToString(),
+                        Thumbnail = x.MediaURL,
+                        URL = "http://" + x.DisplayURL
+                    })
+                 : null
             });
 
             return list;

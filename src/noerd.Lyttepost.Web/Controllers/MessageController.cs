@@ -15,7 +15,7 @@ namespace noerd.Lyttepost.Web.Controllers
         public IEnumerable<LPEntity> GetMessages([FromUri] string q)
         {
             bool searchTwitter = true;
-            bool searchInstagram = true;
+            bool searchInstagram = false;
             var list = SearchService.Search(q, searchTwitter, searchInstagram);
 
             return list;
