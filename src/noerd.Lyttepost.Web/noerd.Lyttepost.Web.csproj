@@ -118,6 +118,7 @@
     <Content Include="img\twitter.png" />
     <Content Include="script\tagtrain\tagtrain.controller.js" />
     <Content Include="script\tagtrain\tagtrain.directive.js" />
+    <Content Include="script\tagtrain\tagtrain.listitem.directive.js" />
     <Content Include="script\tagtrain\tagtrain.service.js" />
     <Content Include="script\search\lyttepost.controller.js" />
     <Content Include="script\search\lyttepost.directive.js" />
@@ -126,6 +127,7 @@
     <Content Include="tagtrain.html" />
     <Content Include="template\tagtrain.html" />
     <Content Include="template\lyttepost.search.html" />
+    <Content Include="template\tagtrain.listitem.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

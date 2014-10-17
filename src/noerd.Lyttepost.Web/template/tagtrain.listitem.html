@@ -1,0 +1,17 @@
+﻿<h3>#{{ tag }}</h3>
+
+<ul ng-repeat="item in items">
+
+    <li class="item">
+        {{ item.Text }}
+        <div class="tags">
+            <a href="#" ng-repeat="tag in item.Tags">#{{ tag }}</a>&nbsp;
+        </div>
+        
+        Level: {{ level }}
+        
+        <span class="children">Placeholder</span>
+
+    </li>
+
+</ul>

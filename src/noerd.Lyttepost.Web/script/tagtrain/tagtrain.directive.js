@@ -1,7 +1,7 @@
 ﻿angular.module("tagtrain", ["ngSanitize"])
     .directive("ttsearch", ["ttService", ttDirective]);
 
-function ttDirective(lpService) {
+function ttDirective(ttService, $compile) {
     var directive = {
         link: link,
         templateUrl: '/template/tagtrain.html',
@@ -14,16 +14,17 @@ function ttDirective(lpService) {
     function link(scope, element, attrs) {
         scope.doSearch = doSearch;
         scope.parseMessage = parseMessage;
-
+        
         function doSearch() {
             var query = scope.searchTerm.replace("#", "");
             if (query == "")
                 return;
-            lpService.getItems(query, callback);
+            ttService.getItems(query, callback);
 
             function callback(data) {
                 var firstItem = data[0];
                 scope.items = [firstItem];
+                console.log(scope.items);
                 //console.log(data);
             }
         }
